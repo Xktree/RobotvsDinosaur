@@ -1,3 +1,4 @@
 class Weapons:
-    def _init_(self, name, attack_power):
-        
+    def __init__(self, name, attack_power):
+        self.name = name
+        self.damage = attack_power

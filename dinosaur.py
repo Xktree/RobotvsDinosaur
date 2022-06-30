@@ -1,27 +1,11 @@
-# Imports from the dinosaur and robot classes
+# Instantiation of class dinosaur
 
-from dinosaur import Dinosaur
-from robot import Robot 
-
-# 
 class Dinosaur:
-    def _init_(self, name, attack_power):
-    
+    def __init__(self, name, attack_power, hp):
+        self.name = name
+        self.attack_power = attack_power
+        self.hp = "100"
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    def attack(self, robot):
+    def assault_robot(self, robot):
+        robot.hp -= self.attack_power
+        print(f"{self.name} assaults {robot.name} and deals {self.attack_power} damage. {robot.name} has {robot.health} hp remaining.")
