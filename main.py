@@ -17,9 +17,18 @@
 # As a developer, I want to choose from a list of 3 possible weapons before a robot makes an attack.
 # As a developer, I want to create Fleet(Robot) and Herd(Dinosaur) classes, allowing for a list of 3 Robots to battle against a list of 3 Dinosaurs.
 
+
+
+
+
 # Import from battlefield 
 
 from battlefield import Battlefield 
 
+# Instantiation of battlefield 
+
 battlefield_main = Battlefield()
+
+# Run battlefield
+
 battlefield_main.run_game()
