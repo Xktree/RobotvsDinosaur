@@ -5,17 +5,17 @@ from weapons import Weapons
 # Instantiation of class robot
 
 class Robot:
-    def __init__(self, name, attack_power, hp):
+    def __init__(self, name):
         self.name = name
-        self.attack_power = attack_power
-        self.hp = "100"
+        self.weapon = Weapons("Ion Cannon", 50)
+        self.hp = 100
 
 # Attack dinosaur 
 
-    def assault_dinosaur(self, dinosaur):
+    def assault(self, dinosaur):
         if dinosaur.hp >= 0:
-            dinosaur.hp -= self.attack_power
-            print(f"{self.name} assaults {dinosaur.name} and deals {self.attack_power} damage. {dinosaur.name} has {dinosaur.hp} hp remaining.")
+            dinosaur.hp = dinosaur.hp - self.weapon.attack_power
+            print(f"{self.name} assaults {dinosaur.name} and deals {self.weapon.attack_power} damage. {dinosaur.name} has {dinosaur.hp} hp remaining.")
             print(f"({dinosaur.name} has {dinosaur.hp} hp left.")
         else:
-            print("{dinosaur.name} is already roadkill!")
+            print(f"{dinosaur.name} is already roadkill!")
